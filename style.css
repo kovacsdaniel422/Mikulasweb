@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+}
+
+aside img {width: 100%;}
+
+main{width: 80%;
+margin: auto;
+max-width: 1000px;
+background-color: rgb(255,255,230);
+display: grid;
+grid-template-areas: 
+"h h h h"
+"n n n n"
+"as a a a"
+"f f f f"}
+
+header{background-image: url(img/fejlec.jpg);
+opacity: 80%;
+height: 550px;
+grid-area: h;}
+
+header h1{
+    color: red;
+    font-weight:bold; 
+    font-family:cursive; 
+    padding: 50px; 
+    text-align: center;
+}
+
+nav{
+    background-color: red;
+    grid-area: n;
+    height: 50px;
+
+}
+nav ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-left: 0px;
+    
+}
+
+nav li{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 5px;
+    list-style-type: none;
+    text-align: center;
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav li:hover{background-color: green;}
+
+
+article{grid-area: a;
+text-align: justify;
+font-size: 10px;
+padding:10px
+}
+
+article h1 {font-size: 15px;
+color: #ff1a1a;
+font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+article img{float: right;
+border: 1px solid black;
+border-radius: 20px;
+box-shadow: black 2px 2px 2px 2px; }
+
+
+aside{grid-area: as;
+}
+
+aside img{width: 100%;}
+
+footer{grid-area: f;}
+
+@media screen and (max-width:700px) {
+
+    main{grid-template-areas:
+    "h"
+    "n"
+    "a"
+    "as"
+    "f" ;}
+    
+    
+}
+
+
